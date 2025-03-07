@@ -19,7 +19,9 @@ export function NavHeader() {
               <li key={key}>
                 <a
                   href={value.href}
-                  className={classNames("hover:text-gray-400")}
+                  className={classNames(
+                    "hover:text-gray-400 active:text-gray-400"
+                  )}
                 >
                   {value.title}
                 </a>

@@ -3,8 +3,13 @@ import { PAGES_CONFIG } from "@/constants/pages";
 
 export function ContactPage() {
   return (
-    <MainBodyContent>
-      <h1>{PAGES_CONFIG.contact.title}</h1>
+    <MainBodyContent title={PAGES_CONFIG.contact.title}>
+      <div>
+        <p>
+          I believe that the best way to help you is to understand your
+          situation and goals.
+        </p>
+      </div>
     </MainBodyContent>
   );
 }
