@@ -17,7 +17,7 @@ export const PAGES_CONFIG: Record<PageConfigProperty, PageConfig> = {
     description: "My Approach",
   },
   services: {
-    title: "What I Offer",
+    title: "Services",
     href: "/services",
     description: "What I Offer",
   },
