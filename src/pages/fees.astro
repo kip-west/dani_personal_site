@@ -3,7 +3,7 @@ import "../styles/global.css";
 import classNames from "classnames";
 import { Footer } from "@/components/shared/footer.tsx";
 import { NavHeader } from "@/components/shared/nav_header.tsx";
-import { IndexPage } from "@/components/index_page";
+import { FeesPage } from "@/components/fees_page";
 import { PAGES_CONFIG } from "src/constants/pages.ts"
 ---
 
@@ -13,13 +13,13 @@ import { PAGES_CONFIG } from "src/constants/pages.ts"
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{PAGES_CONFIG.index.title}</title>
+    <title>Fees</title>
   </head>
 
   <body class="h-screen flex flex-col">
     <NavHeader />
     <main class="flex-grow">
-      <IndexPage />
+      <FeesPage />
     </main>
     <Footer />
   </body>

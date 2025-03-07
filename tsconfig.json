@@ -3,8 +3,14 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"],
   "compilerOptions": {
+    // typescript
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
+    "types": ["astro/client"],
     // to resolve imports from src folder
     "baseUrl": ".",
     "paths": {
