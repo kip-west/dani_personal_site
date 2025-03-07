@@ -1,34 +1,42 @@
 import { PAGES_CONFIG } from "@/constants/pages";
 import classNames from "classnames";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
 
 export function NavHeader() {
   return (
-    <nav className={classNames("bg-gray-900 text-white", "p-4", "h-fit")}>
-      <div
+    <div className="w-full">
+      <NavigationMenu
         className={classNames(
-          "container mx-auto flex justify-between items-center"
+          "bg-gray-900 text-white",
+          "p-3",
+          "max-w-full max-h-fit",
+          "flex justify-between items-center"
         )}
       >
-        <a href="/" className={classNames("text-2xl font-bold")}>
+        <NavigationMenuLink
+          href="/"
+          className={classNames("text-xl font-bold")}
+        >
           Dani Strauss
-        </a>
-        <ul className={classNames("flex space-x-4")}>
+        </NavigationMenuLink>
+
+        <NavigationMenuList className={classNames("flex gap-3")}>
           {Object.entries(PAGES_CONFIG)
             .filter(([key]) => key !== "index")
             .map(([key, value]) => (
-              <li key={key}>
-                <a
-                  href={value.href}
-                  className={classNames(
-                    "hover:text-gray-400 active:text-gray-400"
-                  )}
-                >
+              <NavigationMenuItem key={key}>
+                <NavigationMenuLink href={value.href}>
                   {value.title}
-                </a>
-              </li>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
             ))}
-        </ul>
-      </div>
-    </nav>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
   );
 }
