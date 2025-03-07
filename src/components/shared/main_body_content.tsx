@@ -5,9 +5,9 @@ type MainBodyContentProps = PropsWithChildren<{ title: string }>;
 
 export function MainBodyContent({ children, title }: MainBodyContentProps) {
   return (
-    <div className={classNames("m-2", "flex-grow")}>
+    <div className={classNames("container mx-auto", "p-2")}>
       <h1 className={"text-2xl font-bold"}>{title}</h1>
-      <ScrollArea className="flex-grow">{children}</ScrollArea>
+      <ScrollArea>{children}</ScrollArea>
     </div>
   );
 }
