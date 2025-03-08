@@ -1,4 +1,4 @@
-import type { PageConfigProperty, PageConfig } from "@/components/types/pages";
+import type { PageConfigProperty, PageConfig } from "@/types/pages";
 
 export const PAGES_CONFIG: Record<PageConfigProperty, PageConfig> = {
   index: {
@@ -36,4 +36,4 @@ export const PAGES_CONFIG: Record<PageConfigProperty, PageConfig> = {
     href: "/contact",
     description: "Contact",
   },
-} as const;
+};

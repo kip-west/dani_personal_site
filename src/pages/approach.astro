@@ -1,10 +1,10 @@
 ---
 import "../styles/global.css";
-import classNames from "classnames";
-import { Footer } from "@/components/shared/footer.tsx";
-import { NavHeader } from "@/components/shared/nav_header.tsx";
+import { Body } from "@/components/shared/pages/body.tsx";
 import { ApproachPage } from "@/components/approach_page";
 import { PAGES_CONFIG } from "src/constants/pages.ts"
+
+const title = PAGES_CONFIG.approach.title
 ---
 
 <html lang="en">
@@ -13,14 +13,10 @@ import { PAGES_CONFIG } from "src/constants/pages.ts"
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>My Approach</title>
+    <title>{title}</title>
   </head>
 
-  <body class="h-screen flex flex-col">
-    <NavHeader />
-    <main class="flex-grow">
-      <ApproachPage />
-    </main>
-    <Footer />
-  </body>
+  <Body title={title}>
+    <ApproachPage />
+  </Body>
 </html>
