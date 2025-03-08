@@ -9,14 +9,15 @@ import {
 
 export function NavHeader() {
   return (
-    <div className="w-full">
-      <NavigationMenu
-        className={classNames(
-          "bg-gray-900 text-white",
-          "p-3",
-          "max-w-full max-h-fit",
-          "flex justify-between items-center"
-        )}
+    <NavigationMenu
+      className={classNames(
+        "bg-gray-900 text-white",
+        "p-3",
+        "max-w-full max-h-fit"
+      )}
+    >
+      <div
+        className={classNames("container", "flex justify-between items-center")}
       >
         <NavigationMenuLink
           href="/"
@@ -36,7 +37,7 @@ export function NavHeader() {
               </NavigationMenuItem>
             ))}
         </NavigationMenuList>
-      </NavigationMenu>
-    </div>
+      </div>
+    </NavigationMenu>
   );
 }
