@@ -1,10 +1,11 @@
 export function ApproachPage() {
   return (
     <div>
-      <p>
-        I believe that the best way to help you is to understand your situation
-        and goals.
-      </p>
+      <h1>Approach</h1>
+      <blockquote>
+        Sex isn&apos;t just something we do, it&apos;s a place we go—inside
+        ourselves or with another.
+      </blockquote>
     </div>
   );
 }
