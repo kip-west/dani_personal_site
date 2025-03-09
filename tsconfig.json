@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "strict": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "react",
+    "jsxImportSource": "@emotion/react",
     "types": ["astro/client"],
     // to resolve imports from src folder
     "baseUrl": ".",
