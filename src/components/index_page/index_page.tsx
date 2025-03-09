@@ -1,10 +1,17 @@
+import { css } from "@emotion/react";
+import classNames from "classnames";
+
 export function IndexPage() {
   return (
-    <div>
-      <h1>Home</h1>
-      <p>
-        I believe that the best way to help you is to understand your situation
-        and goals.
+    <div className="h-full flex flex-col items-center justify-center">
+      <p
+        className={classNames(
+          "text-center",
+          "text-6xl text-white font-bold",
+          "tracking-wider"
+        )}
+      >
+        Pleasure matters.
       </p>
     </div>
   );
