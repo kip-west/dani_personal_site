@@ -1,26 +1,27 @@
 ---
 import "../styles/global.css";
-import classNames from "classnames";
-import { Footer } from "@/components/shared/footer.tsx";
-import { NavHeader } from "@/components/shared/nav_header.tsx";
 import { ContactPage } from "@/components/contact_page";
 import { PAGES_CONFIG } from "src/constants/pages.ts"
+import { Header } from "@/components/shared/pages/header";
+import { Footer } from "@/components/shared/pages/footer";
+import { Main } from "@/components/shared/pages/main";
+
+const title = PAGES_CONFIG.contact.title
 ---
 
 <html lang="en">
   <head>
-    <meta charSet="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Contact Me</title>
+    <title>{title}</title>
   </head>
-
   <body class="h-screen flex flex-col">
-    <NavHeader />
-    <main class="flex-grow">
+    <Header client:load />
+    <Main title={title}>
       <ContactPage />
-    </main>
+    </Main>
     <Footer />
   </body>
 </html>
