@@ -1,22 +1,27 @@
 ---
 import "../styles/global.css";
-import { Body } from "@/components/shared/pages/body.tsx";
 import { FeesPage } from "@/components/fees_page";
 import { PAGES_CONFIG } from "src/constants/pages.ts"
+import { Header } from "@/components/shared/pages/header";
+import { Footer } from "@/components/shared/pages/footer";
+import { Main } from "@/components/shared/pages/main";
 
 const title = PAGES_CONFIG.fees.title
 ---
 
 <html lang="en">
   <head>
-    <meta charSet="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-
-  <Body title={title}>
-    <FeesPage />
-  </Body>
+  <body class="h-screen flex flex-col">
+    <Header client:load />
+    <Main title={title}>
+      <FeesPage />
+    </Main>
+    <Footer />
+  </body>
 </html>
