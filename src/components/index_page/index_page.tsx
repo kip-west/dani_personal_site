@@ -11,7 +11,7 @@ export function IndexPage() {
       <h1
         className={classNames(
           "text-center",
-          "text-6xl text-white font-bold",
+          "text-4xl md:text-6xl text-white font-bold",
           "tracking-wider",
           getTransitionClassNames(
             state.matches("visible_title") ||
@@ -24,7 +24,7 @@ export function IndexPage() {
       </h1>
       <p
         className={classNames(
-          "text-center text-3xl text-white font-bold",
+          "text-center text-xl md:text-3xl text-white font-bold",
           getTransitionClassNames(
             state.matches("visible_cta") || state.matches("loaded")
           )
@@ -36,9 +36,9 @@ export function IndexPage() {
         <a
           href={PAGES_CONFIG.approach.href}
           className={classNames(
-            "rounded-full border sm:border-2 border-white border-solid",
+            "rounded-full border-2 border-white border-solid",
             "py-2 px-6",
-            "bg-transparent text-white sm:font-bold",
+            "bg-transparent text-white font-bold",
             "hover:bg-white/20 hover:shadow hover:shadow-white/40 hover:text-no-underline",
             getTransitionClassNames(state.matches("loaded"))
           )}

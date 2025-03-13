@@ -13,7 +13,7 @@ export function Header() {
   return (
     <header className={classNames("bg-[#DAA49A] text-white", "p-3")}>
       <div className="container mx-auto">
-        <NavigationMenu className="max-w-full flex justify-between">
+        <NavigationMenu className="max-w-full flex justify-center md:justify-between relative">
           <NavigationMenuLink
             href="/"
             className={classNames("text-xl font-bold")}
@@ -22,15 +22,15 @@ export function Header() {
           </NavigationMenuLink>
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" className="lg:hidden">
-                |||<span className="sr-only">Toggle navigation menu</span>
+              <Button variant="ghost" className="absolute right-0 md:hidden">
+                ☰<span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="top">
               <PagesLinks />
             </SheetContent>
           </Sheet>
-          <div className={classNames("hidden lg:flex")}>
+          <div className={classNames("hidden md:flex")}>
             <PagesLinks />
           </div>
         </NavigationMenu>
@@ -42,7 +42,7 @@ export function Header() {
 function PagesLinks() {
   return (
     <NavigationMenuList
-      className={classNames("flex flex-col lg:flex-row gap-3")}
+      className={classNames("flex flex-col md:flex-row gap-3")}
     >
       {Object.entries(PAGES_CONFIG)
         .filter(([key]) => key !== "index")
