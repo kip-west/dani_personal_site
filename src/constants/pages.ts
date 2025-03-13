@@ -6,15 +6,15 @@ export const PAGES_CONFIG: Record<PageConfigProperty, PageConfig> = {
     href: "/",
     description: "Home",
   },
-  bio: {
-    title: "About Me",
-    href: "/bio",
-    description: "About Me",
-  },
   approach: {
     title: "My Approach",
     href: "/approach",
     description: "My Approach",
+  },
+  bio: {
+    title: "About Me",
+    href: "/bio",
+    description: "About Me",
   },
   services: {
     title: "Services",
