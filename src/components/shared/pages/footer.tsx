@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-[#DAA49A]/50 text-[#3C0000] py-6 h-fit">
       <div className="container mx-auto text-center">
-        <p>&copy; {currentYear} MySite. All rights reserved.</p>
+        <p>&copy; {currentYear} All rights reserved.</p>
         <ul className="flex justify-center space-x-6 mt-4">
           <li>
             <a href="/contact" className="hover:text-[#050609]">

@@ -6,12 +6,17 @@ export const indexPageMachine = createMachine({
   states: {
     hidden: {
       after: {
-        250: { target: "visible_title" },
+        100: { target: "visible_title" },
       },
     },
     visible_title: {
       after: {
-        250: { target: "loaded" },
+        400: { target: "visible_cta" },
+      },
+    },
+    visible_cta: {
+      after: {
+        400: { target: "loaded" },
       },
     },
     loaded: {
