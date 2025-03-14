@@ -10,7 +10,7 @@ export function IndexPage() {
   return (
     <div className="h-full flex flex-col items-center justify-center">
       <div
-        className="flex flex-col items-center justify-center rounded-full"
+        className="flex flex-col gap-2 items-center justify-center rounded-full"
         css={css`
           --bgcolor: rgba(0, 0, 0, 0.5);
           background-color: var(--bgcolor);
