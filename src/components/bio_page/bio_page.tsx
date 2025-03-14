@@ -1,30 +1,43 @@
 export function BioPage() {
   return (
-    <div>
-      <h1>About Me</h1>
-      <p>
-        I enjoy explaining the mysteries of the human condition in simple words.
-        I like to help people all over the world feel understood, confront their
-        joys and pains, and be motivated to change. All this gives me energy
-        when I wake up in the morning.
-        <br />
-        The modern ideology of love is compelling. Never before has the couple
-        been such a central unit in our social organization. Never have we
-        expected more from our intimate relationships, and never have we
-        crumbled under the weight of so many expectations. Couples therapy is
-        probably the hardest type of therapy to be in and to practice; and I
-        have been on both sides.
-        <br />
-        In my work as a therapist, I see despair, entrenched patterns,
-        loneliness in the presence of another, contempt, violence, lack of any
-        physical touch; so many couples come to me way beyond their due date. I
-        learn, daily, how to master the art of couple therapy. I continually
-        study neuroscience, attachment theory, neuro-linguistic programming, and
-        psychodrama. The great thing about being a therapist is that I
-        don&apos;t have to worry about age-ism and boredom. It&apos;s not like
-        keeping up with technology: as long as my brain works, I can practice
-        until I drop — and I certainly intend to. Thanks for reading my story.
-      </p>
+    <div className="grid gap-6 grid-cols-12 items-center">
+      <img src="/dani.jpeg" alt="" className="col-span-5" />
+      <div className="col-span-7 grid gap-2">
+        <h1 className="flex gap-1 items-center">
+          <span className="text-xl">Dani Leah Strauss</span>
+          <span className="italic text-sm">(she/her)</span>
+          <span>Therapist, LCSW</span>
+        </h1>
+        <div className="grid gap-2">
+          <span>
+            I am a queer, feminist, sex-positive therapist and doula committed
+            to creating a therapeutic space where all of the parts of you feel
+            welcome and at ease. I bring my openness, curiosity, and sense of
+            humor into my sessions. My practice is an affirming environment for
+            folks of all genders and sexual identities. While I specialize in
+            working with intimacy and sexuality, I also love to support people
+            in work around self-love & resiliency.
+          </span>
+          <span>
+            I utilize elements of physical, spiritual, and emotional mindfulness
+            in a blend of talk therapy and somatic therapy to help people
+            connect to the parts of themselves that haven&apos;t had room to
+            thrive. My work focuses on creating space for shame, grief, and hurt
+            to move through us, on celebrating our deep capacity for embodiment
+            and wisdom, and on cultivating connection as a tool for healing from
+            oppression.
+          </span>
+          <span>
+            I draw on my training in social work, yoga, sexual health, and
+            trauma to facilitate Intimacy and Embodiment Therapy with
+            individuals and couples. Intimacy is the process of connecting to
+            our willingness to be held and known. This therapy is offered to
+            support you in the process of uncovering your own power and worth,
+            and forging meaningful connections with others that come from a
+            place of self-knowing.
+          </span>
+        </div>
+      </div>
     </div>
   );
 }

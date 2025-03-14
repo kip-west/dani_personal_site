@@ -11,11 +11,6 @@ export const PAGES_CONFIG: Record<PageConfigProperty, PageConfig> = {
     href: "/approach",
     description: "My Approach",
   },
-  bio: {
-    title: "About Me",
-    href: "/bio",
-    description: "About Me",
-  },
   services: {
     title: "Services",
     href: "/services",
@@ -25,6 +20,11 @@ export const PAGES_CONFIG: Record<PageConfigProperty, PageConfig> = {
     title: "Fees",
     href: "/fees",
     description: "Fees",
+  },
+  bio: {
+    title: "About Me",
+    href: "/bio",
+    description: "About Me",
   },
   associates: {
     title: "Associates",
