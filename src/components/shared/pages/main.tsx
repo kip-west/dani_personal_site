@@ -17,7 +17,7 @@ export function Main({
 }: PropsWithChildren<MainProps>) {
   return (
     <main
-      className={classNames("flex-grow")}
+      className={classNames("flex-grow", "p-2 sm:p-4")}
       css={css`
         background-image: url(${backgroundImage});
         background-size: cover;
