@@ -1,12 +1,25 @@
+import classNames from "classnames";
+
 export function BioPage() {
   return (
-    <div className="grid gap-6 grid-cols-12 items-center">
-      <img src="/dani.jpeg" alt="" className="col-span-5" />
-      <div className="col-span-7 grid gap-2">
-        <h1 className="flex gap-1 items-center">
-          <span className="text-xl">Dani Leah Strauss</span>
-          <span className="italic text-sm">(she/her)</span>
-          <span>Therapist, LCSW</span>
+    <div
+      className={classNames(
+        "flex items-center",
+        "flex-col gap-2",
+        "lg:flex-row lg:gap-8"
+      )}
+    >
+      <img
+        src="/dani.png"
+        alt=""
+        className="w-full max-w-[500px] max-h-[500px] rounded-full"
+      />
+      <div className="flex flex-col gap-2">
+        <h1 className="flex flex-col lg:flex-row gap-1 items-center">
+          <span className="text-xl flex items-center gap-1">
+            Dani Leah Strauss<span className="italic text-sm">(she/her)</span>
+          </span>
+          <span className="font-bold">Therapist, LCSW</span>
         </h1>
         <div className="grid gap-2">
           <span>
