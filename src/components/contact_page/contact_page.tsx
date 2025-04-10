@@ -1,32 +1,17 @@
+import { ContactFormContainer } from "./contact_form/contact_form_container";
+
 export function ContactPage() {
   return (
-    <div>
-      <h1>Contact</h1>
-      <p>
+    <div className="flex items-center justify-center flex-col gap-2 max-w-[1000px] mx-auto text-center">
+      <h1 className="text-3xl sm:text-4xl font-bold">
+        I want to hear from you.
+      </h1>
+      <p className="text-lg sm:text-xl">
         My clients tend to be people in leadership positions, front line
         workers, creatives, and spiritual seekers looking for powerful
         techniques to transform their personal and professional lives.
       </p>
-      <form>
-        <div>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className="border-2 border-gray-300 rounded-md p-2 ml-1"
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="border-2 border-gray-300 rounded-md p-2 ml-1"
-          />
-        </div>
-      </form>
+      <ContactFormContainer />
     </div>
   );
 }
