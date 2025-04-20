@@ -1,4 +1,4 @@
-import { PAGES_CONFIG } from "@/constants/pages";
+import { PAGES_CONFIG } from "@/components/dani_strauss/constants/pages";
 import classNames from "classnames";
 import {
   NavigationMenu,
@@ -15,7 +15,7 @@ export function Header() {
       <div className="container mx-auto">
         <NavigationMenu className="max-w-full flex justify-center md:justify-between relative">
           <NavigationMenuLink
-            href="/"
+            href={PAGES_CONFIG.index.href}
             className={classNames("text-xl font-bold")}
           >
             Dani Strauss

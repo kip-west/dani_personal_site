@@ -1,9 +1,9 @@
 import { useMachine } from "@xstate/react";
 import classNames from "classnames";
 import { indexPageMachine } from "./machines/index_page_machine";
-import { Button } from "../ui/button";
-import { PAGES_CONFIG } from "src/constants/pages.ts";
+import { PAGES_CONFIG } from "@/components/dani_strauss/constants/pages";
 import { css } from "@emotion/react";
+
 export function IndexPage() {
   const [state] = useMachine(indexPageMachine);
 

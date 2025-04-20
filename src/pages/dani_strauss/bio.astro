@@ -1,12 +1,12 @@
 ---
-import "../styles/global.css";
-import { ContactPage } from "@/components/contact_page";
-import { PAGES_CONFIG } from "src/constants/pages.ts"
+import "../../styles/global.css";
+import { BioPage } from "@/components/dani_strauss/bio_page/bio_page.tsx";
+import { PAGES_CONFIG } from "@/components/dani_strauss/constants/pages"
 import { Header } from "@/components/shared/pages/header";
 import { Footer } from "@/components/shared/pages/footer";
 import { Main } from "@/components/shared/pages/main";
 
-const title = PAGES_CONFIG.contact.title
+const title = PAGES_CONFIG.bio.title
 ---
 
 <html lang="en">
@@ -20,7 +20,7 @@ const title = PAGES_CONFIG.contact.title
   <body class="h-screen flex flex-col">
     <Header client:load />
     <Main title={title}>
-      <ContactPage />
+      <BioPage />
     </Main>
     <Footer />
   </body>
