@@ -1,12 +1,12 @@
 ---
-import "../styles/global.css";
-import { ApproachPage } from "@/components/approach_page";
-import { PAGES_CONFIG } from "src/constants/pages.ts"
+import "../../styles/global.css";
+import { IndexPage } from "@/components/dani_strauss/index_page";
+import { PAGES_CONFIG } from "@/components/dani_strauss/constants/pages"
 import { Header } from "@/components/shared/pages/header";
 import { Footer } from "@/components/shared/pages/footer";
 import { Main } from "@/components/shared/pages/main";
 
-const title = PAGES_CONFIG.approach.title
+const title = PAGES_CONFIG.index.title
 ---
 
 <html lang="en">
@@ -19,8 +19,8 @@ const title = PAGES_CONFIG.approach.title
   </head>
   <body class="h-screen flex flex-col">
     <Header client:load />
-    <Main title={title}>
-      <ApproachPage />
+    <Main title={title} backgroundImage="/home_background.jpg" isNotScrollable>
+      <IndexPage client:load />
     </Main>
     <Footer />
   </body>

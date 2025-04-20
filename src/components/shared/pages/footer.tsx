@@ -1,3 +1,5 @@
+import { PAGES_CONFIG } from "@/components/dani_strauss/constants/pages";
+
 const currentYear = new Date().getFullYear();
 
 export function Footer() {
@@ -7,7 +9,10 @@ export function Footer() {
         <p>&copy; {currentYear} All rights reserved.</p>
         <ul className="flex justify-center space-x-6 mt-4">
           <li>
-            <a href="/contact" className="hover:text-[#050609]">
+            <a
+              href={PAGES_CONFIG.contact.href}
+              className="hover:text-[#050609]"
+            >
               Contact
             </a>
           </li>
