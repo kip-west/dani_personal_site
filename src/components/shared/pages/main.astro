@@ -1,0 +1,31 @@
+---
+import { ScrollArea } from "@/components/ui/scroll-area";
+import classNames from "classnames";
+
+interface Props {
+  title: string;
+  backgroundImage?: string;
+  isNotScrollable?: boolean;
+};
+
+const { title, backgroundImage, isNotScrollable } = Astro.props;
+---
+
+<main
+  class={classNames("flex-grow", "p-2 sm:p-4")}
+  style={backgroundImage ? {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  } : undefined}
+>
+  <span class="sr-only">{title} Page</span>
+  {isNotScrollable ? (
+    <div class="container mx-auto flex-1 h-full p-4"><slot /></div>
+  ) : (
+    <ScrollArea className="container mx-auto flex-1 h-full p-4">
+      <slot />
+    </ScrollArea>
+  )}
+</main>

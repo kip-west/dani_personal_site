@@ -1,0 +1,33 @@
+---
+import "../../styles/global.css";
+import { AssociatesPage } from "@/components/dani_strauss/pages/associates_page";
+import { PAGES_CONFIG } from "@/components/dani_strauss/constants/pages"
+import { Header } from "@/components/shared/pages/header";
+import Footer from "@/components/shared/pages/footer.astro";
+import Main from "@/components/shared/pages/main.astro";
+import { HeaderInner } from "@/components/dani_strauss/pages/header_inner";
+import { FooterInner } from "@/components/dani_strauss/pages/footer_inner";
+
+const title = PAGES_CONFIG.pageConfig.associates.title
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="h-screen flex flex-col">
+    <Header className="bg-[#DAA49A] text-white p-3">
+      <HeaderInner client:load />
+    </Header>
+    <Main title={title}>
+      <AssociatesPage />
+    </Main>
+    <Footer className="bg-[#DAA49A] text-white">
+      <FooterInner />
+    </Footer>
+  </body>
+</html>
